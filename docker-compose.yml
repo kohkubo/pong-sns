@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  dev-postgres:
+    image: postgres:14.5-alpine
+    ports:
+      - 5434:5432
+    environment:
+      POSTGRES_USER: ft_transcendence
+      POSTGRES_PASSWORD: 3tpzbk5wgpe7
+      POSTGRES_DB: ft_transcendence
+    restart: always
+    networks:
+      - ft_transcendence
+networks:
+  ft_transcendence:
